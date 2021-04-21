@@ -8,7 +8,6 @@ const requestHandler = (req, res) => {
         res.write('<header><title> express rest </title></header>')
         res.write('<body><h1>')
         res.write('<form action="/message" method="POST"><input type= "text" name="message"><button type= "submit">Send</button>')
-
         res.write('</body>')
         res.write('</html>')
         res.statusCode = 200
