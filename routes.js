@@ -1,6 +1,5 @@
 const fs = require('fs')
 const requestHandler = (req, res) => {
-
     const url = req.url
     const method = req.method
     if (url === '/') {
@@ -33,18 +32,14 @@ const requestHandler = (req, res) => {
                 if (err) {
                     throw err
                 }
-
             });
-
         });
-
     }
     res.setHeader('Context-Type', 'text/html')
     res.write('<html>')
     res.write('<header><title> express rest </title></header>')
     res.write('<body><h1>')
     res.write('<form action="/message" method="POST"><input type= "text" name="message"><button type= "submit">Send</button>')
-
     res.write('</body>')
     res.write('</html>')
     return res.end()
