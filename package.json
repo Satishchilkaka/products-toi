@@ -1,0 +1,15 @@
+{
+  "name": "rest-express",
+  "version": "1.0.0",
+  "description": "rest-express",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "repository": "https://github.com/Satishchilkaka/rest-express.git",
+  "author": "Satish Chilkaka",
+  "license": "MIT",
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
