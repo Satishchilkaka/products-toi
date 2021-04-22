@@ -24,7 +24,7 @@ const requestHandler = (req, res) => {
             console.log(parseBody)
             const userMessage = parseBody.split('=')
             console.log(userMessage[1])
-            fs.writeFile('userMessage.text', userMessage, (err) => {
+            fs.writeFile('message.text', userMessage, (err) => {
                 res.statusCode = 302
                 res.setHeader('Location', '/')
                 res.end()
@@ -36,7 +36,7 @@ const requestHandler = (req, res) => {
     }
     res.setHeader('Context-Type', 'text/html')
     res.write('<html>')
-    res.write('<header><title> express rest </title></header>')
+    res.write('<header><title>Test</title></header>')
     res.write('<body><h1>')
     res.write('<form action="/message" method="POST"><input type= "text" name="message"><button type= "submit">Send</button>')
     res.write('</body>')
