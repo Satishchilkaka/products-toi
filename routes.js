@@ -21,8 +21,9 @@ const requestHandler = (req, res) => {
         })
         return req.on('end', () => {
             const parseBody = Buffer.concat(body).toString()
+            console.log(body)
             console.log(parseBody)
-            const userMessage = parseBody.split('=')
+            const userMessage = parseBody.split('=')[1]
             console.log(userMessage[1])
             fs.writeFile('message.text', userMessage, (err) => {
                 res.statusCode = 302
