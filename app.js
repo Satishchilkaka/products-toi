@@ -1,5 +1,10 @@
-const http = require('http')
-const requestHandler = require('./routes')
-const server = http.createServer(requestHandler)
 
-server.listen(3000)
+const express = require('express')
+
+const app = express()
+
+app.use((req,res, next) => {
+    res.send({test1:"test"})
+})
+
+app.listen(3000)
