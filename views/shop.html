@@ -5,15 +5,64 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Product</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            font-family: sans-serif;
+        }
+
+        main {
+            padding: 1rem;
+        }
+
+        .top-header {
+            width: 100%;
+            height: 3.5rem;
+            background-color: #070707;
+            padding: 0 2.5rem;
+            font-size:x-large;
+            font-family: sans-serif;
+        }
+
+        .top-header-nav {
+            height: 100%;
+            display: flex;
+            align-items: center;
+        }
+
+        .top-header-item-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .top-header__item {
+            margin: 0 2rem;
+            padding: 0;
+        }
+
+        .top-header__item a {
+            text-decoration: none;
+            color: rgba(247, 243, 243, 0.961);
+        }
+
+        .top-header__item a:hover,
+        .top-header__item a:active,
+        .top-header__item a.active {
+            color: #9e98a7;
+        }
+    </style>
 </head>
 <body>
-    <header> 
-        <nav>
-            <ul>
-                <li>
-                    <a href="/">Shop</a>
-                    <a href="/add-product">Add Product</a>
-                </li>
+    <header class="top-header"> 
+        <nav class="top-header-nav">
+    
+                <ul class="top-header-item-list">
+                    <li class="top-header__item"><a class="active" href="/">Shop</a></li>
+                    <li class="top-header__item"><a href="/admin/add-product">Add Product</a></li>
+                
             </ul>
         </nav>
     </header>
