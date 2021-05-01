@@ -10,8 +10,9 @@ router.get('/users', (req, res, next) => {
 })
 router.post('/users',(req, res, next) => {
     console.log(req.body)
-   // res.redirect('/')
-    res.send('<h1> User added </h1>')
+    // res.redirect('/')
+   // res.send('<h1> User added </h1>')
+   res.sendFile(path.join(__dirname, '..','script', 'main.js'))
 })
 
 module.exports= router
