@@ -9,7 +9,7 @@ const app = express()
 
 app.use(bodyParser.urlencoded({extended: false}))
 app.use(express.static(path.join(__dirname, 'public')))
-app.use('/admin',adminRoute)
+app.use('/admin',adminRoute.routes)
 // When both method are having a common path we can apply a filters 
 // EX. adminRoute are having different methods but we can apply filter 
 app.use(shopRoute)

@@ -2,6 +2,9 @@ const express = require('express')
 const router = express.Router();
 const path = require('path')
 const rootDir = require('../util/path')
+
+const product = []
+
 router.get('/add-product',(req,res, next) => {
   // res.send(('<form action="/admin/add-product" method="POST"><input type= "text" name="message"><button type= "submit">Send</button>'))
     res.sendFile(path.join(rootDir, 'views', 'add-product.html'))
@@ -9,9 +12,13 @@ router.get('/add-product',(req,res, next) => {
 })
 
 router.post('/add-product', (req, res, next) => {
-    console.log(req.body)
+  const AdminAddProduct = JSON.parse(JSON.stringify(req.body))
+    
+    product.push({productTitle: AdminAddProduct.title})
     res.redirect('/')
+    console.log(product)
 })
 
 
-module.exports = router
+exports.routes = router;
+exports.product= product
