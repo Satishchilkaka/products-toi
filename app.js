@@ -16,7 +16,7 @@ app.use('/admin',adminRoute.routes)
 // EX. adminRoute are having different methods but we can apply filter 
 app.use(shopRoute)
 app.use((req, res, next) => {
-    res.render('404', {pageTitle: 'Page not found'})
+    res.status(404).render('404', {pageTitle: 'Page not found'})
    // res.status(404).sendFile(path.join(__dirname, './', 'views', '404.html'))
 
 })
