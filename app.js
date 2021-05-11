@@ -5,10 +5,18 @@ const path = require('path')
 const adminRoute = require('./routes/admin')
 const shopRoute =  require('./routes/shop')
 
+const expressHbs = require('express-handlebars')
+
 const app = express()
-app.set('view engine', 'pug')
-app.set('views', 'views')
+// ******* PUG*******
+// app.set('view engine', 'pug')
+// app.set('views', 'views')
 // 1 first view is coming from pug , 2nd view is from views folder {can be used any other name}
+
+app.engine('hbs', expressHbs());
+app.set('view engine', 'hbs')
+app.set('views', 'views')
+
 app.use(bodyParser.urlencoded({extended: false}))
 app.use(express.static(path.join(__dirname, 'public')))
 app.use('/admin',adminRoute.routes)
