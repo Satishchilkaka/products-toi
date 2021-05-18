@@ -12,8 +12,14 @@ const app = express()
 // app.set('view engine', 'pug')
 // app.set('views', 'views')
 // 1 first view is coming from pug , 2nd view is from views folder {can be used any other name}
-
-app.engine('hbs', expressHbs());
+app.engine(
+    'hbs',
+    expressHbs({
+      layoutsDir: 'views/layouts/',
+      defaultLayout: 'main-layout',
+      extname: 'hbs'
+    })
+  );
 app.set('view engine', 'hbs')
 app.set('views', 'views')
 
@@ -26,7 +32,7 @@ app.use(shopRoute)
 app.use((req, res, next) => {
     res.status(404).render('404', {pageTitle: 'Page not found'})
    // res.status(404).sendFile(path.join(__dirname, './', 'views', '404.html'))
-   // work with any one pug or handelbar
+   // work with any one pug or handlebar
 })
 
 app.listen(3000) 
