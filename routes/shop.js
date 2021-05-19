@@ -6,9 +6,9 @@ const rootDir = require('../util/path')
 const adminRoute = require('./admin')
 const product = require('../routes/admin')
 router.get('/',(req, res, next) => {
-   const productName = product.product[0].productTitle
-  
-    res.render('shop', {pName: productName, path: '/', pageTitle: 'Shop', hasProducts: productName.length > 0})
+   const productName = product.product
+  // const productName = product.product[0].productTitle
+    res.render('shop', {pName: productName, path: '/', pageTitle: 'Shop123', hasProducts: product.product.length > 0})
     console.log(productName)
    // res.sendFile(path.join(__dirname,'../', 'views', 'shop.html'))
     
