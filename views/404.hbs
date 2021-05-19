@@ -6,6 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ pageTitle }}</title>
     <link rel="stylesheet" href="/css/main.css">
+           <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+<script>
+  // compile the template
+  var template = Handlebars.compile("Handlebars <b>{{doesWhat}}</b>");
+  // execute the compiled template and print the output to the console
+  console.log(template({ doesWhat: "rocks!" }));
+</script>
 </head>
 <body>
     <header class="top-header"> 
@@ -14,12 +21,12 @@
                 <ul class="top-header-item-list">
                     <li class="top-header__item"><a href="/">Shop</a></li>
                     <li class="top-header__item"><a href="/admin/add-product">Add Product</a></li>
-                
             </ul>
         </nav>
     </header>
     <main>
         <h1> Page not found !!!</h1>
+
     </form>
     </main>
 </body>
