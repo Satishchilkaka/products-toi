@@ -8,10 +8,10 @@ const product = require('../routes/admin')
 router.get('/',(req, res, next) => {
    const productName = product.product
   // const productName = product.product[0].productTitle
-    res.render('shop', {pName: productName, path: '/', pageTitle: 'Shop123', hasProducts: product.product.length > 0})
+    res.render('shop', {pName: product.product.productTitle, path: '/', pageTitle: 'shop', hasProducts: product.product.length > 0})
     console.log(productName)
    // res.sendFile(path.join(__dirname,'../', 'views', 'shop.html'))
-    
+    console.log(product.product.productTitle)
 
 })
 
