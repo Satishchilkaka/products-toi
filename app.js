@@ -5,20 +5,8 @@ const path = require('path')
 const adminRoute = require('./routes/admin')
 const shopRoute =  require('./routes/shop')
 
-const expressHbs = require('express-handlebars')
-
 const app = express()
-// ******* PUG*******
-// app.set('view engine', 'pug')
-// app.set('views', 'views')
-// 1 first view is coming from pug , 2nd view is from views folder {can be used any other name}
-app.engine('hbs',
-expressHbs({layoutsDir: 'views/layouts/',
-      defaultLayout: 'main-layout',
-      extname: 'hbs'
-    })
-  );
-app.set('view engine', 'hbs')
+app.set('view engine', 'ejs')
 app.set('views', 'views')
 
 app.use(bodyParser.urlencoded({extended: false}))
@@ -34,3 +22,20 @@ app.use((req, res, next) => {
 })
 
 app.listen(3000) 
+
+// ******* PUG*******
+// app.set('view engine', 'pug')
+// app.set('views', 'views')
+// 1 first view is coming from pug , 2nd view is from views folder {can be used any other name}
+
+/***********  HBS *********/
+// const expressHbs = require('express-handlebars')
+
+// 
+
+// app.engine('hbs',
+// expressHbs({layoutsDir: 'views/layouts/',
+//       defaultLayout: 'main-layout',
+//       extname: 'hbs'
+//     })
+//   );
