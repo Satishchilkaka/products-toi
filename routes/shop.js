@@ -6,7 +6,6 @@ const rootDir = require('../util/path')
 const adminRoute = require('./admin')
 const product = require('../routes/admin')
 router.get('/', (req, res, next) => {
-   const productName = product.product
 
    res.render('shop', {
       productTitle: product.product[0], 
