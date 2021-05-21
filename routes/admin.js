@@ -22,9 +22,8 @@ router.post('/add-product', (req, res, next) => {
     
     product.push({productTitle: AdminAddProduct.title})
     res.redirect('/')
-   // console.log(product)
 })
-
+// console.log(product)
 
 exports.routes = router;
 exports.product= product
