@@ -23,19 +23,3 @@ app.use((req, res, next) => {
 
 app.listen(3000) 
 
-// ******* PUG*******
-// app.set('view engine', 'pug')
-// app.set('views', 'views')
-// 1 first view is coming from pug , 2nd view is from views folder {can be used any other name}
-
-/***********  HBS *********/
-// const expressHbs = require('express-handlebars')
-
-// 
-
-// app.engine('hbs',
-// expressHbs({layoutsDir: 'views/layouts/',
-//       defaultLayout: 'main-layout',
-//       extname: 'hbs'
-//     })
-//   );
