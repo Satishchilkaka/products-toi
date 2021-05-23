@@ -8,7 +8,7 @@ const product = require('../routes/admin')
 router.get('/', (req, res, next) => {
 
    res.render('shop', {
-      productTitle: product.product[0], 
+      productName: product.product, 
       path: '/', 
       pageTitle: 'shop', 
       hasProducts: product.product.length > 0,
