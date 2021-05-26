@@ -3,9 +3,9 @@ const express = require('express')
 const router = express.Router()
 
 
-const getProduct = require('../controllers/products')
+const getProducts = require('../controllers/products')
 
-router.get('/', getProduct.displayProductInStore)
+router.get('/', getProducts.displayProductInStore)
 
 
 module.exports = router
