@@ -24,7 +24,7 @@ exports.displayProductInStore = (req, res, next) => {
         path: '/',
         pageTitle: 'shop',
         hasProducts: product.length > 0,
-        activeShop: true,
+        activeShop: true, 
         productCSS: true
     })
 }
