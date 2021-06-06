@@ -7,7 +7,6 @@ router.get('/', (req, res, next) => {
         pageTitle: 'index',
         path: '/index'
     })
-   // res.status(200).sendFile(path.join(rootDir, 'views', 'index.html'))
-})
+ })
 
 module.exports = router
