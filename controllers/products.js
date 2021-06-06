@@ -1,4 +1,4 @@
-const product = []
+const Product = require('../models/product')
 exports.addProductsToShop = (req, res, next) => {
     res.render('add-product', {
         pageTitle: 'Add products to shop',
@@ -12,18 +12,19 @@ exports.addProductsToShop = (req, res, next) => {
 exports.getProducts = (req, res, next) => {
 
     const AdminAddProduct = JSON.parse(JSON.stringify(req.body))
-
-    product.push({ productTitle: AdminAddProduct.title })
+    const product = new Product(req.body.title)
+   product.save()
     res.redirect('/')
 }
 
 exports.displayProductInStore = (req, res, next) => {
-
+const products = Product.fetchAll()
+console.log(products)
     res.render('shop', {
-        productName: product,
+        productName: products,
         path: '/',
         pageTitle: 'shop',
-        hasProducts: product.length > 0,
+        hasProducts: products.length > 0,
         activeShop: true, 
         productCSS: true
     })
