@@ -19,7 +19,7 @@ exports.getProducts = (req, res, next) => {
 
 exports.displayProductInStore = (req, res, next) => {
 const products = Product.fetchAll()
-console.log(products)
+console.log(Product.fetchAll())
     res.render('shop', {
         productName: products,
         path: '/',
