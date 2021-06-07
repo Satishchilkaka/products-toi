@@ -7,16 +7,16 @@
     <title><%=pageTitle%></title>
 </head>
 <body>
-   <h1> loading...</h1>
+   <h3> loading...</h3>
 
    <main>
        <div class="container">
-            <form class="login-form" action="/user-welcome" method="POST">
-        <label title="username"> User Name: </label>
-        <input type="text" name="user-name" label="User name">
-        <label title="username"> Password: </label>
-        <input type="password" name="password">
-        <input type="submit">
+            <form action="/user-welcome" method="POST" title="userLogin">
+                <label for="title">User Name:</label>
+        <input type="text" name="user-name" title="userName" label="User name" id="userName">
+        <label for="title">password</label>
+        <input type="password" name="password" title="password" id="password">
+        <button type="submit">Submit</button>
     </form>
 </div>
    </main>
