@@ -13,19 +13,20 @@ exports.getProducts = (req, res, next) => {
 
     const AdminAddProduct = JSON.parse(JSON.stringify(req.body))
     const product = new Product(req.body.title)
-   product.save()
+    product.save()
     res.redirect('/')
 }
 
 exports.displayProductInStore = (req, res, next) => {
-const products = Product.fetchAll()
-console.log(Product.fetchAll())
-    res.render('shop', {
-        productName: products,
-        path: '/',
-        pageTitle: 'shop',
-        hasProducts: products.length > 0,
-        activeShop: true, 
-        productCSS: true
+    Product.fetchAll(products => {
+
+        res.render('shop', {
+            productName: products,
+            path: '/',
+            pageTitle: 'shop',
+            hasProducts: products.length > 0,
+            activeShop: true,
+            productCSS: true
+        })
     })
 }
