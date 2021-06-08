@@ -1,15 +1,13 @@
 const express = require('express')
 const app = express()
-const indexRoute = require('./routes/index')
 
+const loginRoute = require('./routes/login')
+const userProfileRoute = require('./routes/user-profile')
 app.set('view engine', 'ejs')
 app.set('views', 'views')
-app.get('/', (req, res, next) => {
-    res.status(200).render('index', {
-        pageTitle: 'index',
-        path: '/index'
-    })
- })
-app.use(indexRoute)
-app.listen(3000)
 
+
+app.use(loginRoute)
+app.use(userProfileRoute)
+
+app.listen(3000)
