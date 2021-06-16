@@ -27,5 +27,6 @@ exports.displayProductInStore = (req, res, next) => {
             activeShop: true,
             productCSS: true
         })
+        console.log(products)
     })
 }
