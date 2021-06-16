@@ -10,7 +10,7 @@ const getProductsFromFile = (cb) => {
             cb([])
         }
         else {
-            cb(JSON.stringify(productData))
+            cb(JSON.parse(productData))
         }
     })
 }
@@ -33,3 +33,4 @@ module.exports = class Product {
         getProductsFromFile(cb)
     }
 }
+
