@@ -12,7 +12,7 @@ exports.addProductsToShop = (req, res, next) => {
 exports.getProducts = (req, res, next) => {
 
     const AdminAddProduct = JSON.parse(JSON.stringify(req.body))
-    const product = new Product(req.body.title)
+    const product = new Product(AdminAddProduct.title)
     product.save()
     res.redirect('/')
 }
