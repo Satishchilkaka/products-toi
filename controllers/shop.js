@@ -26,7 +26,7 @@ exports.getCartView = (req, res, next) => {
   res.render('shop/cart', {
     path: '/shop/cart',
     pageTitle: 'Cart',
-    formsCSS: true,
+    mainCSS: true,
     productCSS: true
     
   });
