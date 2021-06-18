@@ -1,1 +1,26 @@
-[{"title":"TEST"},{"title":"123"},{"title":"asdfgn"}]
+[
+    {
+        "title": "Test0",
+        "imageUrl": "https://i0.wp.com/cdn-prod.medicalnewstoday.com/content/images/articles/287/287710/blueberries.jpg?w=1155&h=1541",
+        "description": "This is test",
+        "price": "1.02"
+    },
+    {
+        "title": "Test1",
+        "imageUrl": "https://blogs-images.forbes.com/bethhoffman/files/2012/04/Apple.jpg",
+        "description": "TEST Apples",
+        "price": "1.25"
+    },
+    {
+        "title": "Test2",
+        "imageUrl": "https://www.alimentarium.org/en/system/files/thumbnails/image/alimentarium_kiwis.jpg",
+        "description": "TEST kiwi",
+        "price": "1.84"
+    },
+    {
+        "title": "Test3",
+        "imageUrl": "https://cdn-prod.medicalnewstoday.com/content/images/articles/272/272782/oranges-in-a-box.jpg",
+        "description": "TEST orange",
+        "price": "1.85"
+    }
+]
