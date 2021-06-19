@@ -14,6 +14,4 @@ router.get('/cart', shopView.getCartView);
 
 router.get('/orders', shopView.getOrdersView)
 
-// router.get('/checkout', shopView.getCheckout);
-
 module.exports = router;
