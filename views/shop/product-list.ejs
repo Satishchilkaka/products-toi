@@ -16,7 +16,8 @@
                                     </h1>
                                 </header>
                                 <div class="card__image">
-                                    <a href="/" class="quickView-button">Quick view</a>
+                                    <!-- <a href="/" class="quickView-button">Quick view</a> -->
+                                  
                                     <img src="<%= product.imageUrl %>" alt="<%= product.title %>">
                                 </div>
                                 <div class="card__content">
@@ -28,6 +29,7 @@
                                     </p>
                                 </div>
                                 <div class="card__actions">
+                                    <a href="/products/<%= product.id%>" class="btn">View details</a>
                                     <form action="/add-to-cart" method="POST">
                                         <button class="btn">Add to Cart</button>
                                     </form>
