@@ -25,7 +25,9 @@ main {
   width: 100%;
   height: 3.5rem;
   background-color: #050606;
-  padding: 0 1.5rem;
+  padding: 0rem;
+  background-origin: padding-box;
+  bottom: auto;
 }
 
 .main-header__nav {
@@ -140,10 +142,13 @@ main {
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: stretch;
+
 }
 
 .card {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  margin-top: 20px;
+  column-gap: 20px;
 }
 
 .card__header,
@@ -160,28 +165,43 @@ main {
 
 .card__image {
   width: 100%;
-  align-items: center;
-  position: relative;
-  top:0px
+  height: 50%;
+  display: flex;
+  box-sizing: border-box;
+  display: grid;
+  justify-content: center;
+  column-gap: 40px;
+  row-gap: 50px;
+    padding: 20px;
 }
 
 .card__image img {
   width: 100%;
-  align-items: center;
-  position: relative;
-  top:0px
+  height: 50%;
+  box-sizing: border-box;
+  display: grid;
+  column-gap: 40px;
+  
+
+
 }
 
 .card__actions {
     padding: 1rem;
     text-align: center;
+    position: relative;
 }
 
-.card__actions button,
-.card__actions a {
-    margin: 0 0.25rem;
+.card__actions button {
+  margin:  0.25rem;
     margin-bottom: 0.1rem;
-    bottom: 0px;
+    bottom: 10px;
+    position: relative;
+}
+.card__actions a {
+    margin:  0.25rem;
+    margin-bottom: 0.1rem;
+    bottom: 10px;
     position: relative;
 }
 
