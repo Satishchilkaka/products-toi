@@ -36,6 +36,8 @@ module.exports = class Product {
   }
 
   static fetchAll(cb) {
-    getProductsFromJSONFile(cb);
+   const pr =  getProductsFromJSONFile(cb);
+    console.log('pr',pr)
+    return pr
   }
 };
