@@ -1,13 +1,11 @@
-const express = require ('express')
+const express = require('express')
 const app = express()
 
-const loginRoute = require('./routes/login')
-const userRoute = require('./routes/userProfile')
+const userRoute = require('./routes/index')
 
 app.set('view engine', 'ejs')
+
 app.set('views', 'views')
 
-
-app.use(loginRoute)
 app.use(userRoute)
 app.listen(3000)
