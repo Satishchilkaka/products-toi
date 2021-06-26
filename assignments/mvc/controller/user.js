@@ -9,3 +9,14 @@ exports.getIndex = (req, res, next) => {
     })
 }
 
+
+
+exports.getUsersProfiles = (req, res, next) => {
+    res.status(200)
+    .render('user-profile', {
+        path: '/user/userProfile',
+        pageTitle: 'user profile',
+        mainCSS: true
+    })
+}
+

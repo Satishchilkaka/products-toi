@@ -2,7 +2,7 @@ const express = require('express')
 const app = express()
 const path = require('path')
 
-const userRoute = require('./routes/index')
+const userRoute = require('./routes/userRoute')
 
 app.set('view engine', 'ejs')
 
