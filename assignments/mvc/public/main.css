@@ -16,7 +16,7 @@
     font-weight: 400;
     font-display: swap;
     padding: 1rm;
-    color: chartreuse;
+    color: rgb(8, 8, 8);
   }
   
   .h1{
@@ -51,6 +51,11 @@ form {
   height: 100%;
   display: none;
   align-items: center;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
 }
 
 .main-header-item {
@@ -60,22 +65,22 @@ form {
   display: flex;
 }
 
-.main-header__item {
+.main-header-item {
   margin: 0 1rem;
   padding: 0;
 }
 
-.main-header__item a {
+.main-header-item a {
   text-decoration: none;
   color: white;
 }
 
-.main-header__item a:hover {
+.main-header-item a:hover {
   color:#60ebd6;
 }
-  .main-header__item a:active,
-.main-header__item a.active {
-  color:#6aed0d;
+  .main-header-item a:active,
+.main-header-item a.active {
+  color:#eff2ee;
 }
 
 .mobile-nav {
