@@ -1,7 +1,27 @@
 <%- include('includes/head.ejs') %>
+<link rel="stylesheet" href="/css/form.css">
+<link rel="stylesheet" href="/css/main.css">
 </head>
+
 <body>
+    <%- include('includes/navigation.ejs') %>
     <main>
-        <h1> list ...</h1>
+
+
+<form class="user-profile" action="/user/user-profile" method="POST">
+    <h1> User login</h1>
+    <div class="form-control">
+        <label for="title">User Name</label>
+        <input type="text" name="userName" id="userName">
+       
+    </div>
+  
+    <div class="form-control">
+        <label for="title">Password</label>
+        <input type="password" name="password" id="password">
+    </div>
+  
+    <button class="btn" type="submit">Submit</button>
+</form>
     </main>
 <%- include('includes/end.ejs') %>
